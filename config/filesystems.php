@@ -44,6 +44,14 @@ return [
             'throw' => false,
         ],
 
+        'assets' => [
+            'driver' => 'local',
+            'root' => base_path() . '/public/assets',
+            'url' => env('APP_URL').'/assets',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

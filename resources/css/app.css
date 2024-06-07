@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+
+    body {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 1rem;
+        color: white;
+    }
+
+    h2 {
+        @apply text-3xl;
+    }
+
+    .wrapper-l {
+        @apply max-w-4xl container mx-auto;
+    }
+}
+
+@layer components {
+
+    .btn-secondary{
+        @apply  w-full rounded-sm bg-light border border-primary text-black text-sm py-2 hover:bg-zinc-400 hover:border-zinc-400 hover:text-white hover:font-bold  hover:scale-110 sm:px-8 sm:w-fit;
+    }
+
+    .btn-primary {
+        @apply  w-full rounded-sm bg-primary border border-light text-white py-2 text-sm hover:bg-red-800 hover:border-red-800 hover:font-bold hover:scale-110 sm:px-8 sm:w-fit;
+    }
+
+    .navlink {
+        @apply block py-2 px-3 text-light rounded hover:bg-inherit md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-primary dark:hover:bg-inherit dark:hover:text-white md:dark:hover:bg-transparent;
+    }
+
+    .navlink-active {
+        @apply block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-primary md:p-0 dark:text-white md:dark:text-primary;
+    }
+    .games-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        padding-top: 4em;
+        border-bottom: 1px solid white;
+    }
+    .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -100;
+    }
+    .bg-video__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .input-field {
+        @apply  h-full w-full rounded-[7px] border border-blue-gray-200  bg-transparent px-3 py-2.5 pr-20 font-normal text-white outline outline-0 focus:border-2 focus:border-gray-400 placeholder:italic placeholder:text-slate-400;
+    }
+}
