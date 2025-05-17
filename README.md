@@ -7,7 +7,7 @@ php artisan key:generate \
 php artisan migrate --force \
 php artisan db:seed
 
-npm install
+npm install \
 npm run build
 
 php artisan serve
